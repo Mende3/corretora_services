@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  smsfisher:
+    build: ./smsfisher
+    container_name: smsfisher
+    env_file: .env
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - STM_ID_REAL=${STM_ID_REAL}
+      - STM_ACCESS_HASH=${STM_ACCESS_HASH}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+    volumes:
+      - ./smsfisher_session:/app/session
+    depends_on:
+      - n8n
+    restart: unless-stopped
+
+  n8n:
+      image: n8nio/n8n:latest
+      container_name: n8n_on
+      ports:
+        - "5678:5678"
+      environment:
+        - TZ=${TZ}
+      volumes:
+        - n8n_data:/home/node/.n8n
+      restart: unless-stopped
+
+volumes:
+  n8n_data: {}

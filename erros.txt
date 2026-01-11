@@ -1,0 +1,50 @@
+Attaching to n8n_on, smsfisher
+smsfisher  | começando
+smsfisher  | Cliente conectado!
+smsfisher  | Esperando mensagens...
+smsfisher  | phone: Rui
+smsfisher  | phone: 244936854246
+n8n_on     | Permissions 0644 for n8n settings file /home/node/.n8n/config are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.
+n8n_on     | Initializing n8n process
+n8n_on     | Error tracking disabled because this release is older than 6 weeks.
+n8n_on     | n8n ready on ::, port 5678
+n8n_on     | 
+n8n_on     | There are deprecations related to your environment variables. Please take the recommended actions to update your configuration:                                  
+n8n_on     |  - DB_SQLITE_POOL_SIZE -> Running SQLite without a pool of read connections is deprecated. Please set `DB_SQLITE_POOL_SIZE` to a value higher than zero. See: https://docs.n8n.io/hosting/configuration/environment-variables/database/#sqlite
+n8n_on     |  - N8N_RUNNERS_ENABLED -> Running n8n without task runners is deprecated. Task runners will be turned on by default in a future version. Please set `N8N_RUNNERS_ENABLED=true` to enable task runners now and avoid potential issues in the future. Learn more: https://docs.n8n.io/hosting/configuration/task-runners/
+n8n_on     |  - N8N_BLOCK_ENV_ACCESS_IN_NODE -> The default value of N8N_BLOCK_ENV_ACCESS_IN_NODE will be changed from false to true in a future version. If you need to access environment variables from the Code Node or from expressions, please set N8N_BLOCK_ENV_ACCESS_IN_NODE=false. Learn more: https://docs.n8n.io/hosting/configuration/environment-variables/security/
+n8n_on     | 
+n8n_on     | Initializing AuthRolesService...                                          
+n8n_on     | AuthRolesService initialized successfully.
+n8n_on     | [license SDK] Skipping renewal on init: license cert is not initialized
+n8n_on     | Version: 1.109.2
+n8n_on     | Start Active Workflows:
+n8n_on     | Activated workflow "test_em_prod" (ID: RN3hrMlM03jUKahl)
+n8n_on     | 
+n8n_on     | Editor is now accessible via:
+n8n_on     | http://localhost:5678                                                     
+n8n_on     | (node:7) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+n8n_on     | (Use `node --trace-deprecation ...` to show where the warning was created)
+smsfisher  | Server closed the connection: 0 bytes read on a total of 8 expected bytes
+smsfisher  | Unhandled error while receiving data
+smsfisher  | Traceback (most recent call last):
+smsfisher  |   File "/usr/local/lib/python3.11/site-packages/telethon/network/mtprotosender.py", line 505, in _recv_loop                                                      
+smsfisher  |     body = await self._connection.recv()
+smsfisher  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                  
+smsfisher  |   File "/usr/local/lib/python3.11/site-packages/telethon/network/connection/connection.py", line 304, in recv                                                    
+smsfisher  |     raise err
+smsfisher  |   File "/usr/local/lib/python3.11/site-packages/telethon/network/connection/connection.py", line 335, in _recv_loop                                              
+smsfisher  |     data = await self._recv()
+smsfisher  |            ^^^^^^^^^^^^^^^^^^                                             
+smsfisher  |   File "/usr/local/lib/python3.11/site-packages/telethon/network/connection/connection.py", line 374, in _recv                                                   
+smsfisher  |     return await self._codec.read_packet(self._reader)
+smsfisher  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                    
+smsfisher  |   File "/usr/local/lib/python3.11/site-packages/telethon/network/connection/tcpfull.py", line 25, in read_packet                                                 
+smsfisher  |     packet_len_seq = await reader.readexactly(8)  # 4 and 4
+smsfisher  |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+smsfisher  |   File "/usr/local/lib/python3.11/asyncio/streams.py", line 748, in readexactly                                                                                  
+smsfisher  |     raise exceptions.IncompleteReadError(incomplete, n)
+smsfisher  | asyncio.exceptions.IncompleteReadError: 0 bytes read on a total of 8 expected bytes                                                                              
+smsfisher  | Attempt 1 at connecting failed: ConnectionRefusedError: [Errno 111] Connect call failed ('149.154.167.92', 443)                                                  
+smsfisher  | Attempt 2 at connecting failed: TimeoutError: 
+smsfisher  | Attempt 3 at connecting failed: TimeoutError: 

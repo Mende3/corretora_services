@@ -1,0 +1,15 @@
+
+__pycache__/
+*.pyc
+.env
+.venv
+.git
+node_modules
+
+**/credenciais do n8n
+**/outros scripts
+
+smsfisher/creeds.py
+smsfisher/test.py
+
+erros.text
